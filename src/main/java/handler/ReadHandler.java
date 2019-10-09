@@ -33,20 +33,6 @@ public class ReadHandler implements Runnable {
         }
     }
 
-    // todo 添加write
-//    public void write(byte[] bs){
-//        selectionKey.interestOps(SelectionKey.OP_WRITE);
-//        ByteBuffer buffer = ByteBuffer.allocate(1024);
-//        buffer.put(bs);
-//        try {
-//            buffer.flip();
-//            socketChannel.write(buffer);
-//            selectionKey.interestOps(SelectionKey.OP_READ);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
-
     public void run() {
         System.out.println("read");
         ByteBuffer inputBuffer = ByteBuffer.allocate(1024);
@@ -58,11 +44,17 @@ public class ReadHandler implements Runnable {
                 inputBuffer.flip();
                 inputBuffer.get(bs, inputBuffer.position(), inputBuffer.limit());
                 System.out.println(Arrays.toString(bs));
+                // 写入
+                ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
+                byteBuffer.put(bs);
+                // 在写入前必须flip
+                byteBuffer.flip();
+                socketChannel.write(byteBuffer);
+                byteBuffer.clear();
             }
             if(i==-1){// 读取返回-1时，说明客户端主动关闭链接，否则一直轮询
                 socketChannel.close();
             }
-            write(new byte[]{1,2,3});
         } catch (IOException e) {
             e.printStackTrace();
         }
