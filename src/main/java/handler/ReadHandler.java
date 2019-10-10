@@ -1,5 +1,6 @@
 package handler;
 
+import abstracts.AbstractHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,7 +12,7 @@ import java.nio.channels.Selector;
 import java.nio.channels.SocketChannel;
 import java.util.Arrays;
 
-public class ReadHandler implements Runnable {
+public class ReadHandler extends AbstractHandler {
 
     private SocketChannel socketChannel;
 
@@ -33,7 +34,8 @@ public class ReadHandler implements Runnable {
         }
     }
 
-    public void run() {
+    @Override
+    public void doHandler() {
         System.out.println("read");
         ByteBuffer inputBuffer = ByteBuffer.allocate(1024);
         inputBuffer.clear();
@@ -58,5 +60,15 @@ public class ReadHandler implements Runnable {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public <T> T callback(T t) {
+        return null;
+    }
+
+    @Override
+    public <T> T fail() {
+        return null;
     }
 }
