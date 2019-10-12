@@ -1,13 +1,10 @@
 package thread;
 
 import com.google.common.util.concurrent.*;
-import interfaces.Handler;
+import interfaces.CallBack;
 import interfaces.Listener;
 
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
 public class ThreadPool {
 
@@ -26,17 +23,17 @@ public class ThreadPool {
         exctorService = MoreExecutors.listeningDecorator(executor);
     }
 
-    public static <T> void submit(Handler handler){
-        ListenableFuture submit = exctorService.submit(handler);
-        Futures.addCallback(submit, new FutureCallback<T>() {
+    public static <T> void submit(Callable callable, CallBack callback){
+        ListenableFuture<byte[]> submit = exctorService.submit(callable);
+        Futures.addCallback(submit, new FutureCallback<byte[]>() {
             @Override
-            public void onSuccess(T result) {
-                handler.callback(result);
+            public void onSuccess(byte[] result) {
+                callback.callback(result);
             }
 
             @Override
             public void onFailure(Throwable t) {
-                handler.fail();
+                callback.fail();
             }
         });
     }
@@ -44,5 +41,9 @@ public class ThreadPool {
     public void addListenr(Runnable r, Listener listener){
         ListenableFuture<?> submit = exctorService.submit(r);
         submit.addListener(listener,exctorService);
+    }
+
+    public static void excute(Runnable runnable){
+        exctorService.execute(runnable);
     }
 }

@@ -1,7 +1,6 @@
 package acceptor;
 
 import handler.ReadHandler;
-import interfaces.Acceptor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import selector.Reactor;
@@ -29,7 +28,7 @@ public class AcceptorImpl implements Runnable {
             SocketChannel accept = reactor.getServerSocketChannel().accept();
             if(accept!=null){// 每一个链接单独使用一个handler
                 ReadHandler readHandler = new ReadHandler(reactor.getSelector(), accept);
-                ThreadPool.<byte[]>submit(readHandler);
+                ThreadPool.excute(readHandler);
             }
         } catch (IOException e) {
             e.printStackTrace();
