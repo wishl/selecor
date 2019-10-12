@@ -1,5 +1,6 @@
 package handler;
 
+import abstracts.AbstractHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,7 +12,7 @@ import java.nio.channels.Selector;
 import java.nio.channels.SocketChannel;
 import java.util.Arrays;
 
-public class ReadHandler implements Runnable {
+public class ReadHandler extends AbstractHandler {
 
     private SocketChannel socketChannel;
 
@@ -33,7 +34,8 @@ public class ReadHandler implements Runnable {
         }
     }
 
-    public void run() {
+    @Override
+    public void doHandler() {
         System.out.println("read");
         ByteBuffer inputBuffer = ByteBuffer.allocate(1024);
         inputBuffer.clear();
@@ -45,18 +47,30 @@ public class ReadHandler implements Runnable {
                 inputBuffer.get(bs, inputBuffer.position(), inputBuffer.limit());
                 System.out.println(Arrays.toString(bs));
                 // 写入
-                ByteBuffer byteBuffer = ByteBuffer.allocate(1024);
-                byteBuffer.put(bs);
-                // 在写入前必须flip
-                byteBuffer.flip();
-                socketChannel.write(byteBuffer);
-                byteBuffer.clear();
+                WriteHandler.write(socketChannel,bs);
             }
             if(i==-1){// 读取返回-1时，说明客户端主动关闭链接，否则一直轮询
                 socketChannel.close();
             }
         } catch (IOException e) {
+            // OP_READ 事件不仅仅只有可读时才触发，
+            // 当channel中数据读完远程的另一端被关闭有一个错误的pending都会触发OP_READ事件"!
             e.printStackTrace();
+            try {
+                socketChannel.close();
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
         }
+    }
+
+    @Override
+    public <T> T callback(T t) {
+        return null;
+    }
+
+    @Override
+    public <T> T fail() {
+        return null;
     }
 }

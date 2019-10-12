@@ -1,6 +1,6 @@
 package selector;
 
-import acceptor.Acceptor;
+import acceptor.AcceptorImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -42,7 +42,7 @@ public class Reactor implements Runnable {
         // serverSocket处理链接事件
         SelectionKey selectionKey = serverSocketChannel.register(selector, SelectionKey.OP_ACCEPT);
 
-        selectionKey.attach(new Acceptor(this));
+        selectionKey.attach(new AcceptorImpl(this));
         logger.info("创建Reactor成功");
     }
 
