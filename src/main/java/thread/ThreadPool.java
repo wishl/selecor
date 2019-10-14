@@ -10,11 +10,13 @@ public class ThreadPool {
 
     private static final ListeningExecutorService exctorService;
 
-    private static int coreSize = 16;
-    private static int maxSize = 32;
+    // 当前机器环境中CPU核心数量
+    private static int coreNum = Runtime.getRuntime().availableProcessors();
+    private static int coreSize = 2*coreNum;
+    private static int maxSize = 2*coreSize;
     private static int keepAlive = 0;
     private static TimeUnit timeUnit = TimeUnit.SECONDS;
-    private static BlockingQueue<Runnable> blockingQueue = new ArrayBlockingQueue(1000);
+    private static BlockingQueue<Runnable> blockingQueue = new ArrayBlockingQueue(2048);
 
     static {
         ThreadPoolExecutor executor = new ThreadPoolExecutor(coreSize, maxSize, keepAlive, timeUnit, blockingQueue, (Runnable r, ThreadPoolExecutor executor1) -> {

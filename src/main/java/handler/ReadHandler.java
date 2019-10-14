@@ -23,9 +23,10 @@ public class ReadHandler extends AbstractHandler {
             logger.info("开始创建ReadHandler对象");
             this.socketChannel = socketChannel;
             socketChannel.configureBlocking(false);
+            // 在selector.select()方法阻塞的时候，register方法会一直阻塞知道select()方法返回
+            selector.wakeup();
             SelectionKey selectionKey = socketChannel.register(selector, SelectionKey.OP_READ);
             selectionKey.attach(this);
-            selector.wakeup();
             logger.info("创建ReadHandler对象成功");
         } catch (ClosedChannelException e) {
             e.printStackTrace();

@@ -1,8 +1,10 @@
 package selector;
 
 import acceptor.AcceptorImpl;
+import org.omg.SendingContext.RunTime;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import subselector.NioSubSelector;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -43,6 +45,7 @@ public class Reactor implements Runnable {
         SelectionKey selectionKey = serverSocketChannel.register(selector, SelectionKey.OP_ACCEPT);
 
         selectionKey.attach(new AcceptorImpl(this));
+
         logger.info("创建Reactor成功");
     }
 
@@ -55,7 +58,6 @@ public class Reactor implements Runnable {
                 while (iterator.hasNext()){
                     SelectionKey selectionKey = iterator.next();
                     dispatch(selectionKey);
-//                    selectionKeys.clear();
                     iterator.remove();
                 }
             } catch (IOException e) {
