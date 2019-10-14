@@ -27,6 +27,7 @@ public class AcceptorImpl implements Runnable {
             // 处理链接的请求
             SocketChannel accept = reactor.getServerSocketChannel().accept();
             if(accept!=null){// 每一个链接单独使用一个handler
+                // 此时是单线程
                 ReadHandler readHandler = new ReadHandler(reactor.getSelector(), accept);
                 ThreadPool.excute(readHandler);
             }
