@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration scan="true">
-	<property name="LOG_HOME" value="/data/logs/mrcar-service" />
+	<property name="LOG_HOME" value="/data/logs/selector" />
 	<!-- 日志输出上下文名称 -->
 	<contextName>usThe</contextName>
 	<!-- 输出日志到控制台 ConsoleAppender -->
@@ -17,7 +17,7 @@
 	<!--输出每天的运行日志到文件SystemOut.log-->
 	<appender name="SystemOutFileAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<!-- 正在记录的日志文件的路径及文件名 -->
-		<file>${LOG_HOME}/info/info.log</file>
+		<file>${LOG_HOME}/info/selector.log</file>
 		<!-- 日志记录器的滚动策略，按日期，按大小记录 -->
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
 			<!-- 归档的日志文件的路径。%d{yyyy-MM-dd}指定日期格式，%i指定索引 -->
@@ -70,7 +70,7 @@
 			<onMismatch>DENY</onMismatch>
 		</filter>
 	</appender>
-	
+
 	<!-- 输出操作日志到文件  每天一个文件 -->
 	<!--输出每天的运行日志到文件operlog.log-->
 	<appender name="oper" class="ch.qos.logback.core.rolling.RollingFileAppender">
@@ -99,7 +99,7 @@
 			<onMismatch>DENY</onMismatch>		<!--用于配置不符合过滤条件的日志的操作-->
 		</filter>
 	</appender>
-	
+
 	<!-- 输出异常日志到文件  每天一个文件 -->
 	<!--输出每天的运行日志到文件exception.log-->
 	<appender name="except" class="ch.qos.logback.core.rolling.RollingFileAppender">
@@ -128,48 +128,10 @@
 			<onMismatch>DENY</onMismatch>		<!--用于配置不符合过滤条件的日志的操作-->
 		</filter>
 	</appender>
-	
-	<!-- 输出异常日志到文件  每天一个文件 -->
-	<!--输出每天的运行日志到文件exception.log-->
-	<appender name="except1" class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<!-- 正在记录的日志文件的路径及文件名 -->
-		<file>${LOG_HOME}/shortrent_error/error.log</file>
-		<!-- 日志记录器的滚动策略，按日期，按大小记录 -->
-		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<!-- 归档的日志文件的路径。%d{yyyy-MM-dd}指定日期格式，%i指定索引 -->
-			<fileNamePattern>${LOG_HOME}/shortrent_error/error_%d{yyyyMMdd}.%i.log</fileNamePattern>
-			<!-- 除按日志记录之外，还配置了日志文件不能超过2M，若超过2M，日志文件会以索引0开始 -->
-			<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
-				<maxFileSize>2MB</maxFileSize>
-			</timeBasedFileNamingAndTriggeringPolicy>
-		</rollingPolicy>
-		<!-- 追加方式记录日志 -->
-		<append>true</append>
-		<!-- 日志文件的格式 -->
-		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
-			<pattern>%msg%n</pattern>
-			<charset>utf-8</charset>
-		</encoder>
-		<!-- 此日志文件记录debug及以上级别的 -->
-		<filter class="ch.qos.logback.classic.filter.LevelFilter">
-			<level>INFO</level>
-			<onMatch>ACCEPT</onMatch>		<!--用于配置符合过滤条件的日志的操作-->
-			<onMismatch>DENY</onMismatch>		<!--用于配置不符合过滤条件的日志的操作-->
-		</filter>
-	</appender>
 
-
-	<!--这个logger的设置是：举例在org.springframework包下面的所有输出日志必须级别level在info及以上级别才会被输出！-->
-	<!--这样可以避免输出一些spring框架的许多常见debug信息!-->
-	<logger name="org.springframework" level="info"/>
-	<logger name="org.json" level="error"/>
-	<logger name="io.netty" level="info"/>
-	<logger name="org.slf4j" level="info"/>
-	<logger name="ch.qos.logback" level="info"/>
- 	
 	<root level="info">
 		<appender-ref ref="ErrOutFileAppender"/>
 		<appender-ref ref="SystemOutFileAppender"/>
-		 <appender-ref ref="ConsoleAppender"/>
+		<appender-ref ref="ConsoleAppender"/>
 	</root>
 </configuration>

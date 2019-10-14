@@ -25,7 +25,8 @@ public class ReadHandler extends AbstractHandler {
             socketChannel.configureBlocking(false);
             SelectionKey selectionKey = socketChannel.register(selector, SelectionKey.OP_READ);
             selectionKey.attach(this);
-            selector.wakeup();
+            // 因为使用的是相同的selector，所以不需要添加，在多selector下会有问题，详见SubSelector分支
+//            selector.wakeup();
             logger.info("创建ReadHandler对象成功");
         } catch (ClosedChannelException e) {
             e.printStackTrace();
