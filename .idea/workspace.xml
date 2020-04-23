@@ -2,35 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bff44a87-a61a-4dbe-9718-fb02f5bfb854" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/bio/BioClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bio/BioServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/abstracts/AbstractHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/acceptor/AcceptorImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/constant/Constant.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/handler/ReadHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/handler/WriteHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interfaces/Acceptor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interfaces/CallBack.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interfaces/Handler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interfaces/Listener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/selector/Reactor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/thread/ThreadPool.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/selector.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/abstracts/AbstractHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/acceptor/AcceptorImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/constant/Constant.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/handler/ReadHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/handler/WriteHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/interfaces/Acceptor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/interfaces/CallBack.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/interfaces/Handler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/interfaces/Listener.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/main/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/selector/Reactor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/thread/ThreadPool$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/thread/ThreadPool.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bio/BioServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bio/BioServer.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,13 +33,13 @@
         <option name="mavenHome" value="D:/apache-maven-3.2.1" />
       </MavenGeneralSettings>
     </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
-  </component>
+  <component name="ProjectId" id="1ZZPs3D2Z2qRIV5SPTDJMwhjqu7" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -195,6 +168,7 @@
       <workItem from="1570758500714" duration="206000" />
       <workItem from="1570867296618" duration="2078000" />
       <workItem from="1571022538943" duration="6257000" />
+      <workItem from="1585043847371" duration="1726000" />
     </task>
     <task id="LOCAL-00001" summary="初次提交">
       <created>1569811665224</created>
@@ -206,17 +180,19 @@
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="初次提交" />
@@ -237,12 +213,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/bio/BioServer.java</url>
-          <line>27</line>
+          <line>28</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/bio/BioServer.java</url>
-          <line>28</line>
+          <line>29</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

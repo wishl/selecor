@@ -25,11 +25,13 @@ public class BioServer {
 
     public void start(){
         try {
-            Socket accept = serverSocket.accept();
-            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(accept.getInputStream()));
-            String s;
-            while ( (s = bufferedReader.readLine())!=null) {
-                System.out.println(s);
+            while (true) {
+                Socket accept = serverSocket.accept();
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(accept.getInputStream()));
+                String s;
+                while ((s = bufferedReader.readLine()) != null) {
+                    System.out.println(s);
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();
