@@ -43,7 +43,7 @@ public class Reactor implements Runnable {
         serverSocketChannel.configureBlocking(false);
         // serverSocket处理链接事件
         SelectionKey selectionKey = serverSocketChannel.register(selector, SelectionKey.OP_ACCEPT);
-
+        // 存储事件唤醒
         selectionKey.attach(new AcceptorImpl(this));
 
         logger.info("创建Reactor成功");
