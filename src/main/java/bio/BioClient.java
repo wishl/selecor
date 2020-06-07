@@ -20,12 +20,21 @@ public class BioClient {
     }
 
     public void sendData(String s){
+        BufferedWriter writer = null;
         try {
-            BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
+            writer = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
             writer.write(s);
             writer.flush();
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            if (writer != null) {
+                try {
+                    writer.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 

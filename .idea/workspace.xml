@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bff44a87-a61a-4dbe-9718-fb02f5bfb854" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bio/BioServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bio/BioServer.java" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,15 +14,33 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>read</find>
+      <find>op_read</find>
+      <find>0</find>
+      <find>register</find>
+      <find>SystemOutFileAppender</find>
+      <find>ConsoleAppender</find>
+      <find>SelectionKey</find>
+      <find>close</find>
+      <find>op_</find>
+      <find>selectoer</find>
+      <find>selector</find>
+      <find>writeHandler</find>
+      <find>select</find>
+      <find>selectionKey</find>
+      <find>selectionkey</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Thread" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -30,7 +48,8 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="D:/apache-maven-3.2.1" />
+        <option name="mavenHome" value="D:/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="D:\apache-maven-3.6.3\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -39,13 +58,17 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectId" id="1ZZPs3D2Z2qRIV5SPTDJMwhjqu7" />
+  <component name="ProjectId" id="1cyIf60bhhQfClPmvDNTmcoq84m" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571037312041" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1570532284448" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -54,25 +77,19 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ideaworkspace\selecor" />
       <recent name="D:\work\selector\src\main\resources" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn install" />
     </option>
   </component>
   <component name="RunManager" selected="Application.BioClient">
     <configuration name="BioClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="bio.BioClient" />
-      <module name="selector" />
+      <module name="selecor" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="bio.*" />
@@ -85,7 +102,7 @@
     </configuration>
     <configuration name="BioServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="bio.BioServer" />
-      <module name="selector" />
+      <module name="selecor" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="bio.*" />
@@ -138,16 +155,6 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="ServiceViewManager">
-    <option name="allServicesViewState">
-      <serviceView>
-        <treeState>
-          <expand />
-          <select />
-        </treeState>
-      </serviceView>
-    </option>
-  </component>
   <component name="SvnConfiguration">
     <configuration>C:\Users\YF\AppData\Roaming\Subversion</configuration>
   </component>
@@ -162,13 +169,7 @@
       <workItem from="1570495893729" duration="17101000" />
       <workItem from="1570522062155" duration="6014000" />
       <workItem from="1570583074526" duration="2882000" />
-      <workItem from="1570599988416" duration="9653000" />
-      <workItem from="1570672775795" duration="8455000" />
-      <workItem from="1570705455429" duration="668000" />
-      <workItem from="1570758500714" duration="206000" />
-      <workItem from="1570867296618" duration="2078000" />
-      <workItem from="1571022538943" duration="6257000" />
-      <workItem from="1585043847371" duration="1726000" />
+      <workItem from="1591494508474" duration="300000" />
     </task>
     <task id="LOCAL-00001" summary="初次提交">
       <created>1569811665224</created>
@@ -183,55 +184,78 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="初次提交" />
     <option name="LAST_COMMIT_MESSAGE" value="初次提交" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="303" y="150" key="FileChooserDialogImpl" timestamp="1591494622348">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="303" y="150" key="FileChooserDialogImpl/0.0.1440.860/1440.0.1440.860@0.0.1440.860" timestamp="1591494622348" />
+    <state width="1397" height="241" key="GridCell.Tab.0.bottom" timestamp="1591494896279">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="1397" height="241" key="GridCell.Tab.0.bottom/0.0.1440.860/1440.0.1440.860@0.0.1440.860" timestamp="1591494896279" />
+    <state width="1397" height="241" key="GridCell.Tab.0.center" timestamp="1591494896279">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="1397" height="241" key="GridCell.Tab.0.center/0.0.1440.860/1440.0.1440.860@0.0.1440.860" timestamp="1591494896279" />
+    <state width="1397" height="241" key="GridCell.Tab.0.left" timestamp="1591494896279">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="1397" height="241" key="GridCell.Tab.0.left/0.0.1440.860/1440.0.1440.860@0.0.1440.860" timestamp="1591494896279" />
+    <state width="1397" height="241" key="GridCell.Tab.0.right" timestamp="1591494896279">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="1397" height="241" key="GridCell.Tab.0.right/0.0.1440.860/1440.0.1440.860@0.0.1440.860" timestamp="1591494896279" />
+    <state width="1397" height="241" key="GridCell.Tab.1.bottom" timestamp="1591494896621">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="1397" height="241" key="GridCell.Tab.1.bottom/0.0.1440.860/1440.0.1440.860@0.0.1440.860" timestamp="1591494896621" />
+    <state width="1397" height="241" key="GridCell.Tab.1.center" timestamp="1591494896621">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="1397" height="241" key="GridCell.Tab.1.center/0.0.1440.860/1440.0.1440.860@0.0.1440.860" timestamp="1591494896621" />
+    <state width="1397" height="241" key="GridCell.Tab.1.left" timestamp="1591494896621">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="1397" height="241" key="GridCell.Tab.1.left/0.0.1440.860/1440.0.1440.860@0.0.1440.860" timestamp="1591494896621" />
+    <state width="1397" height="241" key="GridCell.Tab.1.right" timestamp="1591494896621">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state width="1397" height="241" key="GridCell.Tab.1.right/0.0.1440.860/1440.0.1440.860@0.0.1440.860" timestamp="1591494896621" />
+    <state x="136" y="74" key="MergeDialog" timestamp="1591494669472">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="136" y="74" key="MergeDialog/0.0.1440.860/1440.0.1440.860@0.0.1440.860" timestamp="1591494669472" />
+    <state x="429" y="146" key="MultipleFileMergeDialog" timestamp="1591494671892">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="429" y="146" key="MultipleFileMergeDialog/0.0.1440.860/1440.0.1440.860@0.0.1440.860" timestamp="1591494671892" />
+    <state x="221" y="72" key="SettingsEditor" timestamp="1591494625074">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="221" y="72" key="SettingsEditor/0.0.1440.860/1440.0.1440.860@0.0.1440.860" timestamp="1591494625074" />
+    <state x="482" y="142" key="git4idea.branch.GitSmartOperationDialog" timestamp="1591494642830">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="482" y="142" key="git4idea.branch.GitSmartOperationDialog/0.0.1440.860/1440.0.1440.860@0.0.1440.860" timestamp="1591494642830" />
+    <state x="376" y="195" width="672" height="677" key="run.anything.popup" timestamp="1591494601569">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="376" y="195" width="672" height="677" key="run.anything.popup/0.0.1440.860/1440.0.1440.860@0.0.1440.860" timestamp="1591494601569" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/acceptor/AcceptorImpl.java</url>
-          <line>36</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/handler/ReadHandler.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/bio/BioServer.java</url>
           <line>28</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/bio/BioServer.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/bio/BioClient.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="6" />
+          <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="antWorkspaceConfiguration">
-    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
-    <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="masterDetails">
     <states>
